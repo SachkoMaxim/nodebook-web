@@ -19,4 +19,4 @@ services:
       - ./:/e2e
       - /e2e/node_modules
     working_dir: /e2e
-    command: npx cypress run
+    command: sh -c "npm install typescript ts-node && npx cypress run"
