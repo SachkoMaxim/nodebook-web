@@ -1,5 +1,5 @@
 # Use an official Node runtime as the parent image
-FROM node:18
+FROM node:20
 
 # Set the working directory in the container to /app
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install any needed packages specified in package.json
-RUN npm install --no-cache
+RUN npm install
 
 # Copy the rest of the application code to the working directory
 COPY . .
