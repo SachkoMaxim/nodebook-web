@@ -17,6 +17,5 @@ services:
       - CYPRESS_BASE_URL=http://app:3000
     volumes:
       - ./:/e2e
-      - /e2e/node_modules
     working_dir: /e2e
-    command: sh -c "npm install typescript ts-node && npx cypress run"
+    entrypoint: sh -c "npm install && npx cypress run"
